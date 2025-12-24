@@ -1,27 +1,42 @@
 "use client";
 import { useState } from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaGithub, FaBriefcase } from 'react-icons/fa'
+ 
 export default function ContactPage() {
-    const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const res = await fetch("http://localhost:3000/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
-            });
-            const data = await res.json();
-            alert(data.message || "Message sent!");
-        } catch (err) {
-            console.error("Error:", err);
-            alert("Failed to send message");
-        }
-    };
+const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Error sending message!");
+    }
+  }
 
     return (
         <>
@@ -79,9 +94,4 @@ export default function ContactPage() {
         </>
     );
 }
-
-
-
-
-
 
