@@ -5,9 +5,9 @@ import React from "react";
 const About = () => {
   return (
     <div>
-      <div className="min-h-screen bg-background-50 flex items-center justify-center p-6">
+      <div className="min-h-screen bg-gradient-to-br from-blue-100 to-blue-500 flex items-center justify-center p-6">
         <div className="max-w-3xl bg-background shadow-lg rounded-2xl p-10">
-          <h1 className="text-3xl font-bold text-white-800 mb-4">About Us</h1>
+          <h1 className="text-3xl font-bold text-blue-700 mb-4">About Us</h1>
           <p className="text-white-600 leading-relaxed mb-6">
             Welcome to our website! We are passionate developers dedicated to
             building clean, modern, and user-friendly applications. Our mission is
@@ -37,10 +37,10 @@ const About = () => {
 
       {/* Page Content */}
       <div className="pt-20 text-center">
-        <h1 className="text-4xl font-bold text-blue-800">
+        <h1 className="text-4xl font-bold text-blue-700">
           Welcome to Abhi Coder 🚀
         </h1>
-        <p className="mt-2 mb-10 text-blue-600">
+        <p className="mt-2 mb-10 text-blue-500">
           This is your Next.js page with a Responsive Website.
         </p>
       </div>

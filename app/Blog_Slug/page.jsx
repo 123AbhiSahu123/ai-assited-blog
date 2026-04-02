@@ -119,7 +119,7 @@ export default function BlogSlugPage() {
         <div className="mt-10">
           <Link
             href="/blog"
-            className="inline-block px-5 py-2 rounded-lg bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-semibold shadow hover:scale-105 transition-transform"
+            className="inline-block px-5 py-2 rounded-lg bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-semibold shadow hover:scale-105 transition-transform"
           >
             ← Back to Blogs
           </Link>

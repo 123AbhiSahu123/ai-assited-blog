@@ -63,7 +63,7 @@ export default function BlogPage() {
     return (
         <section className="min-h-screen bg-background-50 dark:bg-background-900">
             {/* Hero Section */}
-            <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-20 text-center text-white bg-background">
+            <div className="bg-gradient-to-r from-indigo-500 via-blue-500 py-20 text-center text-white bg-background">
                 <motion.h1
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ export default function BlogPage() {
                             className="group relative bg-backgroud dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden dark:boder-2"
                         >
                             {/* Top accent bar */}
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-pink-500"></div>
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-blue-500"></div>
 
                             <div className="p-6 flex flex-col justify-between h-full">
                                 <div>
@@ -118,7 +118,7 @@ export default function BlogPage() {
                                 {/* Read More Button */}
                                 <Link
                                     href={blog.link}
-                                    className="mt-6 inline-block w-full text-center py-2 px-4 rounded-lg bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-semibold shadow-md hover:scale-105 transition-transform"
+                                    className="mt-6 inline-block w-full text-center py-2 px-4 rounded-lg bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-semibold shadow-md hover:scale-105 transition-transform"
                                 >
                                     Blog with Abhi →
                                 </Link>
